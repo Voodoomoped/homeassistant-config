@@ -210,11 +210,11 @@ sensor:
     solax_feedin_energy_total:
       friendly_name: "SolaX Feedin Energy Total"
       unit_of_measurement: kWh
-      value_template: "{{ states('sensor.solax_group_i2').split(',')[2]| float / 10 }}"
+      value_template: "{{ states('sensor.solax_group_i2').split(',')[2]| float / 100 }}"
     solax_consumed_energy_total:
       friendly_name: "SolaX Consumed Energy Total"
       unit_of_measurement: kWh
-      value_template: "{{ states('sensor.solax_group_i2').split(',')[4]| float / 10 }}"
+      value_template: "{{ states('sensor.solax_group_i2').split(',')[4]| float / 100 }}"
     solax_eps_volatge:
       friendly_name: "SolaX EPS Voltage"
       unit_of_measurement: V
@@ -238,7 +238,7 @@ sensor:
     solax_total_energy_to_grid:
       friendly_name: "SolaX Total Export"
       unit_of_measurement: kWh
-      value_template: "{{ states('sensor.solax_group_i2').split(',')[12]| float / 1000 }}"
+      value_template: "{{ states('sensor.solax_group_i2').split(',')[12]| float / 1000000 }}"
 
 
 
